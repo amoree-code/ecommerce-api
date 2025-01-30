@@ -14,8 +14,6 @@ router.post("/register", async (req, res) => {
         process.env.PASS_SEC
       ).toString(),
     });
-    const existingUser = await User.findOne({ email: req.body.email });
-    existingUser && res.status(400).json("User already exists");
     const sevedUser = await user.save();
     res.status(201).json(sevedUser);
   } catch (err) {
