@@ -7,7 +7,6 @@ const {
 } = require("./verifyToken");
 
 // CREATE
-
 router.post("/", verifyTokenAndAdmin, async (req, res) => {
   const newProduct = new Product(req.body);
 
@@ -59,7 +58,6 @@ router.get("/:id", async (req, res) => {
 router.get("/", async (req, res) => {
   const Qnew = req.query.new;
   const Qcategory = req.query.category;
-
   try {
     let prosucts;
 

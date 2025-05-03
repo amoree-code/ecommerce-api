@@ -1,4 +1,5 @@
 const router = require("express").Router();
+
 const User = require("../models/User");
 const CryptoJS = require("crypto-js");
 const Jwt = require("jsonwebtoken");
@@ -14,7 +15,6 @@ router.post("/register", async (req, res) => {
         process.env.PASS_SEC
       ).toString(),
     });
-
     const sevedUser = await user.save();
     res.status(201).json(sevedUser);
   } catch (err) {

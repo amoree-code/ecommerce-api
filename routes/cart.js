@@ -6,8 +6,8 @@ const {
   verifyTokenAndAdmin,
 } = require("./verifyToken");
 
-// CREATE CART
 router.post("/", verifytoken, async (req, res) => {
+  // CREATE CART
   const newCart = new Cart(req.body);
   try {
     const savedCart = await newCart.save();

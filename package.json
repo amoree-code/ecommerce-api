@@ -6,7 +6,8 @@
     "node": "22.x"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index",
+    "dev": "nodemon index"
   },
   "author": "",
   "license": "ISC",
